@@ -1,0 +1,18 @@
+## git branch 만들기 (1회 수행)
+cd /Users/hyeongukchoi/Desktop/cs_study (작업폴더 이동)
+git clone https://github.com/kyungnamKo/240817starbucks.git
+cd 240817starbucks
+git checkout -b 240817starbucks_hyeonguk
+
+## git branch 최신화 (수시 수행)
+git checkout main
+git pull origin main 
+git checkout 240817starbucks_hyeonguk
+git merge main  # 또는 master
+
+## 소스 commit (수시 수행)
+git add .
+git commit -m "문제번호 : XXXXX, 날짜 : YYMMDD"
+git push origin 240817starbucks_hyeonguk
+이후 github사이트에서 pullrequest ==> 경남이 승인
+
