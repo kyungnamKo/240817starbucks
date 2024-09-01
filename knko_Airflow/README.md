@@ -2,7 +2,9 @@
 
 <h2>1. Docker 설치</h2>
 
-- 운영 체제 : Rocky-Linux-8
+- 환경 : Google Cloud Platform
+- 머신 타입 : n1-standard-4 (Disk : 50GB)
+- 운영 체제 : Rocky-Linux-9
 
 ### docker 리포지토리 추가
 <pre><code>sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</code></pre>
@@ -23,10 +25,19 @@
 echo -e "AIRFLOW_UID=$(id -u)" > .env</code></pre>
 
 ### Airflow 설치
-<pre><code>docker compose up airflow-init</code></pre>
+<pre><code>sudo docker compose up airflow-init</code></pre>
 
 ### Airflow 실행
-<pre><code>docker compose up</code></pre>
+<pre><code>sudo docker compose up</code></pre>
+
+### Airflow 컨테이너 확인 (새로운 터미널에서 실행)
+<pre><code>sudo docker ps</code></pre>
+
+### Airflow Webserver 접근
+<pre><code># 방화벽 open 후 접근 가능
+http://localhost:8080
+ID : airflow
+PW : airflow</code></pre>
 
 <h2>3. 참고자료</h2>
 
