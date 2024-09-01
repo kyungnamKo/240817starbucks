@@ -1,6 +1,7 @@
 <h1>Apache Airflow 설치</h1>
 
 <h2>1. Docker 설치</h2>
+
 - 운영 체제 : Rocky-Linux-8
 
 ### docker 리포지토리 추가
@@ -26,3 +27,9 @@ echo -e "AIRFLOW_UID=$(id -u)" > .env</code></pre>
 
 ### Airflow 실행
 <pre><code>docker compose up</code></pre>
+
+<h2>3. 참고자료</h2>
+
+1. https://docs.rockylinux.org/ko/gemstones/containers/docker/
+
+2. https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html
